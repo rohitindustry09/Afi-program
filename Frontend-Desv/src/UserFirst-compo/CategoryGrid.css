@@ -1,0 +1,28 @@
+.imayge-of-grid {
+  border: 3px solid #fff;
+  padding: 2px;
+  box-shadow: -5px 5px 0 black !important;
+}
+
+.title-categories span {
+  color: #242424;
+}
+
+.category-image {
+  height: 200px;
+  object-fit: cover;
+  transform: translateX(4px);
+  transition: transform 0.3s ease;
+}
+
+.category-box:hover .category-image {
+  transform: scale(1.1);
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.category-box:hover .arrow-icon {
+  transform: translateX(10px);
+}

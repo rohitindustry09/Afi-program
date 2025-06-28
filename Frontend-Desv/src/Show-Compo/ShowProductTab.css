@@ -1,0 +1,126 @@
+.psp-buy-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.psp-buy-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  background-color: #f8fdf8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.psp-buy-option:hover {
+  background-color: #eefaf0;
+  transform: scale(1.01);
+}
+
+.psp-pridce {
+  color: #8532ff; /* Bootstrap's green */
+  font-weight: 600;
+  font-size: 16px;
+}
+.btn-find-out {
+  background: #fff !important;
+  color: #242424;
+  font-size: .8rem !important;
+  border: 1px solid blue !important;
+  transition: all .2s;
+  font-weight: bold;
+}
+
+.btn-find-out:active {
+  background: #bddaff !important;
+  color: #242424 !important;
+  font-size: 0.9rem !important;
+  text-shadow: 0.5px 0.5px 2px #8d8d8d;
+}
+
+.btn-find-out:hover {
+  color: #242424 !important;
+  background: #e6f0ff !important; /* Optional: subtle hover background */
+}
+
+
+.btn-add-to-cart {
+  border: 1px solid #242424;
+  background: #f1f1f1;
+  color: #242424;
+}
+
+.btn-add-to-cart:focus {
+  border: 1px solid #242424;
+  background: #f1f1f1;
+  color: #242424;
+}
+.btn-favourite {
+  border: 1px solid #ff328f;
+  background: #ffe9ee;
+  color: #242424;
+}
+.btn-favourite:focus {
+  border: 1px solid #ff328f;
+  background: #ffdbeb;
+  color: #242424;
+}
+
+.psp-text {
+  flex-grow: 1;
+  font-weight: 500;
+  font-size: 15px;
+  color: #222;
+}
+
+.cutout-price {
+  font-size: 17px;
+}
+
+.price-withour-cutout {
+  font-weight: bold;
+}
+
+.image-we-selected {
+  border: 1px solid #242424;
+  padding: 2px;
+  box-shadow: 5px 5px 0 black !important;
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.product-image {
+  transition: transform 0.4s ease !important;
+}
+
+.psp-icon {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+}
+
+.product-image {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
+  .heading-down {
+    margin-top: 0px !important;
+  }
+  
+@media (max-width: 768px) {
+  .product-image {
+    height: 300px !important;
+  }
+  .heading-down {
+    margin-top: 20px !important;
+  }
+}
+

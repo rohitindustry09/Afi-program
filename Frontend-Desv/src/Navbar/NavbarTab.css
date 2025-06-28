@@ -1,0 +1,189 @@
+/* navabar search style */
+.navbar-search-outer-parent {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  position: ;
+  top: 0;
+  z-index: 100;
+}
+
+/* Floating background layer */
+.navbar-floating-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: float 6s ease-in-out infinite;
+  z-index: 0;
+  transform: scale(1.7); /* Smaller scale to avoid huge drift */
+  filter: brightness(1.2) saturate(1.7);
+  transform-origin: center;
+  overflow: hidden;
+}
+
+.navbar-floatings-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0) 75%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.navbar-floating-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 25%,
+    #000 90%,
+    transparent 75%,
+    #747474 100%
+  );
+  transform: skewX(-20deg);
+  animation: flare 2s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes flare {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: scale(1.4) translateX(60px);
+  }
+  50% {
+    transform: scale(1.4) translateX(-60px); /* Subtle drift */
+  }
+  100% {
+    transform: scale(1.4) translateX(60px);
+  }
+}
+
+
+.navbar-search-inner-parent {
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 80%;
+  padding: 1rem;
+}
+
+.navbar-search-inner-parent i {
+  font-weight: 500;
+}
+
+.navbar-search-inner-parent input {
+  z-index: 2 !important;
+  font-weight: 500;
+  border: none;
+  background: #fff;
+  padding: 0.5rem;
+  color: #242424;
+  border-radius: 20px;
+  outline: none;
+  transition: all 0.5s;
+}
+
+.navbar-search-inner-parent input:hover {
+  box-shadow: 1px 1px 10px #fff;
+}
+
+/* navbar navigation flower or food */
+.navigation-tab-parent {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+.navigation-tab-parent .navigation-tabs {
+  flex: 1;
+}
+.navigation-tab-parent .navigation-tabs button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+}
+.navigation-tab-parent .navigation-tabs .icon {
+  font-size: 2rem;
+}
+
+/* hamburger-parent */
+.hamburger-parent-outer {
+  position: fixed;
+  right: 5%;
+  top: 2%;
+  z-index: 101;
+  background: #fff;
+  box-shadow: 2px 2px 4px black;
+  padding: 5px;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 1s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.hamburger-parent {
+  display: flex;
+  gap: 20px;
+  font-size: 24px;
+  color: #1a1a1a;
+  justify-content: center;
+  align-items: center;
+  transform: translate(22px, 2px);
+  transition: all 0.5s;
+}
+
+.no-click {
+  pointer-events: none;
+}
+
+/* without phone */
+.nav-search {
+  font-size: 19px;
+  border-radius: 30px !important;
+  padding: 7px 12px !important;
+}
+
+@media (max-width: 768px) {
+  .nav-search {
+    font-size: 15px;
+  }
+}

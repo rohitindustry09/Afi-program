@@ -1,0 +1,86 @@
+/*banner*/
+
+/*categoryGrid*/
+.card-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.card:hover {
+  transform: translateY(-2px);
+  transition: all 0.2s ease-in-out;
+}
+/*DailyCarousel*/
+.carousel-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/*filter carousel*/
+.filter-carousel-wrapper {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  background: linear-gradient(to right, #add8ff,  transparent, #add8ff);
+}
+
+.filter-carousel-wrapper-outer {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+
+/*
+.filter-carousel-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  background: linear-gradient(to right, #fff, transparent, transparent, #fff);
+  z-index: 20; 
+  pointer-events: none;
+}*/
+
+.filter-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-carousel {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  white-space: nowrap;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+  font-size: 1.5rem;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.scroll-btn.left {
+  left: 5px;
+}
+
+.scroll-btn.right {
+  right: 5px;
+}
+
+/* Custom colors if not already defined in Bootstrap */
+.bg-purple { background-color: #6f42c1; }
+.bg-orange { background-color: #fd7e14; }
+.bg-pink   { background-color: #ffc0cb; }

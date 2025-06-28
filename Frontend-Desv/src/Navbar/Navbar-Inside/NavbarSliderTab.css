@@ -1,0 +1,54 @@
+
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+.slider-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: ;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 100;
+  transition: width .7s cubic-bezier(0.42, 0, 0.58, 1), right .7s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.slider-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  color: black;
+  background: white;
+  border-top-left-radius: 10px;
+  z-index: ;
+  padding: 1rem;
+  transition: all 1.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.slider-menu ul {
+  list-style: none;
+  line-height: 2.5;
+  padding: 0;
+}
+.slider-menu ul li {
+  font-weight: 600;
+  background: #f3f3f3;
+  box-shadow: -3px -3px 0 black;
+  margin: .5rem 0;
+  border-radius: 5px;
+  padding: 0 .5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.slider-menu ul li .hamburger-options-icon {
+  transform: rotate(0deg);
+  transition: transform .5s;
+}
+.toGo {
+  color: color-mix(in srgb, var(--elementsFontsColor), black 5%);
+}
