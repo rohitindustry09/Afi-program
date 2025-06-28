@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const backendLinkSlice = createSlice({
   name: 'BackendLink',
   initialState: {
-    BackendLink: 'http://localhost:3715',
+    BackendLink: 'https://pubshup-back.vercel.app',
   },
   reducers: {
     updateBackendLink: (state, action) => {
